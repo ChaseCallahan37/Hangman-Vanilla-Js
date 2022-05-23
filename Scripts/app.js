@@ -20,7 +20,9 @@ const guessesLeftLabel = document.querySelector("#guesses-left")
 
 const resetButton = document.querySelector("#reset-button")
 
-const submitForm = document.querySelector("#letter-submit-form")
+const guessTextBox = document.querySelector("#guess-text-box")
+
+// const guessSubmitButton = document.querySelector("#guess-submit-button")
 
 
 //World event looking for the user to enter any key
@@ -32,14 +34,14 @@ const submitForm = document.querySelector("#letter-submit-form")
 //     }    
 // })
 
-submitForm.addEventListener("submit", (e)=>{
-    e.preventDefault()
-    const inputBox = e.target[0]
-    const guess = inputBox.value
+guessTextBox.addEventListener("input", (e)=>{
+    const guess = e.target.value
     if(hangmanGame.status === "playing"){
         displayMssg = hangmanGame.makeGuess(guess)
         renderPage()
-        inputBox.value = ""
+        setTimeout(()=>{
+            guessTextBox.value = ""
+        }, 300)
     }  
 })
 
