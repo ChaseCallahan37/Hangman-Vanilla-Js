@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Hangman</title>
+        <link href="/Styles/styles.css" rel="stylesheet">
+        <link href="/Images/hangmanIcon.png" rel="icon">
+    </head>
+    <body>
+        <div id="Progress">
+           <label>Status: </label><label id="status-label"></label>
+            <br>
+           <div id="word-progress" class="puzzle"></div>
+            <br>
+            <label >Letters Guessed: </label><label id="guessed-letters"></label>
+            <br>
+            <label class="warning">Guesses Left: </label><label id="guesses-left" class="warning"></label>
+            <br>
+            <p id="message-box"></p>
+            <br>
+            <button class="button" id="reset-button">Reset</button>
+        </div>
+        <script src="/scripts/hangman.js"></script>
+        <script src="/scripts/hangman-functions.js"></script>
+        <script src="/scripts/requests.js"></script>
+        <script src="/scripts/app.js"></script>
+    </body>
+</html>
