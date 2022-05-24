@@ -22,6 +22,8 @@ const resetButton = document.querySelector("#reset-button")
 
 const guessTextBox = document.querySelector("#guess-text-box")
 
+const setGuessTextBox = document.querySelector("#set-wordcount-txt")
+
 // const guessSubmitButton = document.querySelector("#guess-submit-button")
 
 
@@ -32,6 +34,15 @@ const guessTextBox = document.querySelector("#guess-text-box")
 //         displayMssg = hangmanGame.makeGuess(guess)
 //         renderPage()
 //     }    
+// })
+
+// setGuessTextBox.addEventListener("input", (e)=>{
+//     debugger
+//     const txtVal = e.target.value
+//     if(txtVal > 9 || typeof txtVal !== "number"){
+//         debugger
+//         e.target.value = ""
+//     }
 // })
 
 guessTextBox.addEventListener("input", (e)=>{
